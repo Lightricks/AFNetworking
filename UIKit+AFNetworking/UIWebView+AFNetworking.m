@@ -141,7 +141,7 @@
                     [strongSelf.delegate webViewDidFinishLoad:strongSelf];
                 }
             }
-            failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+            failure:^(NSURLSessionDataTask __unused * _Nonnull task, NSError * _Nonnull error) {
                 if (failure) {
                     failure(error);
                 }
