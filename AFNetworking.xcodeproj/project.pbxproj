@@ -10,9 +10,6 @@
 		1BF9F9601C87832B00F1F35A /* AFImageResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9F95F1C87832B00F1F35A /* AFImageResponseSerializerTests.m */; };
 		1BF9F9611C87843200F1F35A /* AFImageResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9F95F1C87832B00F1F35A /* AFImageResponseSerializerTests.m */; };
 		1BF9F9621C87843300F1F35A /* AFImageResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9F95F1C87832B00F1F35A /* AFImageResponseSerializerTests.m */; };
-		1FE783011C5857A100A73B7C /* httpbinorg_01192017.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1FE783001C58579D00A73B7C /* httpbinorg_01192017.cer */; };
-		1FE783021C5857A100A73B7C /* httpbinorg_01192017.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1FE783001C58579D00A73B7C /* httpbinorg_01192017.cer */; };
-		1FE783031C5857A200A73B7C /* httpbinorg_01192017.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1FE783001C58579D00A73B7C /* httpbinorg_01192017.cer */; };
 		2960BAC31C1B2F1A00BA02F0 /* AFUIButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2960BAC21C1B2F1A00BA02F0 /* AFUIButtonTests.m */; };
 		297824A31BC2D69A0041C395 /* adn_0.cer in Resources */ = {isa = PBXBuildFile; fileRef = 297824A01BC2D69A0041C395 /* adn_0.cer */; };
 		297824A41BC2D69A0041C395 /* adn_0.cer in Resources */ = {isa = PBXBuildFile; fileRef = 297824A01BC2D69A0041C395 /* adn_0.cer */; };
@@ -54,9 +51,6 @@
 		2987B0D51BC40AE900179A4C /* adn_2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 297824A21BC2D69A0041C395 /* adn_2.cer */; };
 		2987B0D61BC40AEC00179A4C /* ADNNetServerTrustChain in Resources */ = {isa = PBXBuildFile; fileRef = 298D7CDF1BC2CB5A00FD3B3E /* ADNNetServerTrustChain */; };
 		2987B0D71BC40AF000179A4C /* HTTPBinOrgServerTrustChain in Resources */ = {isa = PBXBuildFile; fileRef = 298D7CE21BC2CB7C00FD3B3E /* HTTPBinOrgServerTrustChain */; };
-		2987B0D81BC40AF300179A4C /* AddTrust_External_CA_Root.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C6E1BC2C88F00FD3B3E /* AddTrust_External_CA_Root.cer */; };
-		2987B0D91BC40AF300179A4C /* COMODO_RSA_Certification_Authority.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C6F1BC2C88F00FD3B3E /* COMODO_RSA_Certification_Authority.cer */; };
-		2987B0DA1BC40AF300179A4C /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C701BC2C88F00FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer */; };
 		2987B0DC1BC40AF600179A4C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C771BC2C88F00FD3B3E /* logo.png */; };
 		2987B0DD1BC40AFB00179A4C /* AltName.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C791BC2C88F00FD3B3E /* AltName.cer */; };
 		2987B0DE1BC40AFB00179A4C /* foobar.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C7A1BC2C88F00FD3B3E /* foobar.com.cer */; };
@@ -80,12 +74,6 @@
 		298D7CBE1BC2CA9D00FD3B3E /* AltName.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C791BC2C88F00FD3B3E /* AltName.cer */; };
 		298D7CBF1BC2CA9D00FD3B3E /* foobar.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C7A1BC2C88F00FD3B3E /* foobar.com.cer */; };
 		298D7CC01BC2CA9D00FD3B3E /* NoDomains.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C7B1BC2C88F00FD3B3E /* NoDomains.cer */; };
-		298D7CC11BC2CAA100FD3B3E /* AddTrust_External_CA_Root.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C6E1BC2C88F00FD3B3E /* AddTrust_External_CA_Root.cer */; };
-		298D7CC21BC2CAA100FD3B3E /* COMODO_RSA_Certification_Authority.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C6F1BC2C88F00FD3B3E /* COMODO_RSA_Certification_Authority.cer */; };
-		298D7CC31BC2CAA100FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C701BC2C88F00FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer */; };
-		298D7CC51BC2CAA200FD3B3E /* AddTrust_External_CA_Root.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C6E1BC2C88F00FD3B3E /* AddTrust_External_CA_Root.cer */; };
-		298D7CC61BC2CAA200FD3B3E /* COMODO_RSA_Certification_Authority.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C6F1BC2C88F00FD3B3E /* COMODO_RSA_Certification_Authority.cer */; };
-		298D7CC71BC2CAA200FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer in Resources */ = {isa = PBXBuildFile; fileRef = 298D7C701BC2C88F00FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer */; };
 		298D7CD31BC2CAE800FD3B3E /* AFHTTPResponseSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 298D7C821BC2C88F00FD3B3E /* AFHTTPResponseSerializationTests.m */; };
 		298D7CD41BC2CAE900FD3B3E /* AFHTTPResponseSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 298D7C821BC2C88F00FD3B3E /* AFHTTPResponseSerializationTests.m */; };
 		298D7CD51BC2CAEC00FD3B3E /* AFHTTPSessionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 298D7C831BC2C88F00FD3B3E /* AFHTTPSessionManagerTests.m */; };
@@ -202,6 +190,14 @@
 		88D1B6061E59D8C9002A6EE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B5FC1E59D847002A6EE4 /* UIKit.framework */; };
 		88D1B6071E59D8D4002A6EE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6001E59D85A002A6EE4 /* Security.framework */; };
 		88D1B6091E59D8EF002A6EE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6081E59D8EF002A6EE4 /* QuartzCore.framework */; };
+		946173442490E2F500F9149A /* httpbinorg_02182021.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173432490E2F500F9149A /* httpbinorg_02182021.cer */; };
+		946173452490E3B100F9149A /* httpbinorg_02182021.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173432490E2F500F9149A /* httpbinorg_02182021.cer */; };
+		946173482490EB6500F9149A /* Amazon Root CA 1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173462490EB6400F9149A /* Amazon Root CA 1.cer */; };
+		946173492490EB6500F9149A /* Amazon.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173472490EB6400F9149A /* Amazon.cer */; };
+		9461734A2490EB7800F9149A /* Amazon Root CA 1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173462490EB6400F9149A /* Amazon Root CA 1.cer */; };
+		9461734B2490EB7800F9149A /* Amazon.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173472490EB6400F9149A /* Amazon.cer */; };
+		9461734D2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9461734C2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer */; };
+		9461734E2490EC7A00F9149A /* Starfield Services Root Certificate Authority - G2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9461734C2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer */; };
 		E91164651DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E91164641DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m */; };
 		E91164661DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E91164641DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m */; };
 		E91164671DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E91164641DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m */; };
@@ -233,7 +229,6 @@
 
 /* Begin PBXFileReference section */
 		1BF9F95F1C87832B00F1F35A /* AFImageResponseSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageResponseSerializerTests.m; sourceTree = "<group>"; };
-		1FE783001C58579D00A73B7C /* httpbinorg_01192017.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = httpbinorg_01192017.cer; sourceTree = "<group>"; };
 		2960BAC21C1B2F1A00BA02F0 /* AFUIButtonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFUIButtonTests.m; sourceTree = "<group>"; };
 		297824A01BC2D69A0041C395 /* adn_0.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = adn_0.cer; path = ADNNetServerTrustChain/adn_0.cer; sourceTree = "<group>"; };
 		297824A11BC2D69A0041C395 /* adn_1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = adn_1.cer; path = ADNNetServerTrustChain/adn_1.cer; sourceTree = "<group>"; };
@@ -242,9 +237,6 @@
 		2987B0AE1BC408A200179A4C /* AFNetworking tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AFNetworking tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		298D7C3B1BC2C79500FD3B3E /* AFNetworking iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AFNetworking iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		298D7C4A1BC2C7B200FD3B3E /* AFNetworking Mac OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AFNetworking Mac OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		298D7C6E1BC2C88F00FD3B3E /* AddTrust_External_CA_Root.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AddTrust_External_CA_Root.cer; sourceTree = "<group>"; };
-		298D7C6F1BC2C88F00FD3B3E /* COMODO_RSA_Certification_Authority.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = COMODO_RSA_Certification_Authority.cer; sourceTree = "<group>"; };
-		298D7C701BC2C88F00FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = COMODO_RSA_Domain_Validation_Secure_Server_CA.cer; sourceTree = "<group>"; };
 		298D7C771BC2C88F00FD3B3E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		298D7C791BC2C88F00FD3B3E /* AltName.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AltName.cer; sourceTree = "<group>"; };
 		298D7C7A1BC2C88F00FD3B3E /* foobar.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = foobar.com.cer; sourceTree = "<group>"; };
@@ -316,6 +308,10 @@
 		88D1B6021E59D865002A6EE4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		88D1B6041E59D86F002A6EE4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		88D1B6081E59D8EF002A6EE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		946173432490E2F500F9149A /* httpbinorg_02182021.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = httpbinorg_02182021.cer; sourceTree = "<group>"; };
+		946173462490EB6400F9149A /* Amazon Root CA 1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amazon Root CA 1.cer"; sourceTree = "<group>"; };
+		946173472490EB6400F9149A /* Amazon.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = Amazon.cer; sourceTree = "<group>"; };
+		9461734C2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Starfield Services Root Certificate Authority - G2.cer"; sourceTree = "<group>"; };
 		E91164641DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestSerializerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -418,11 +414,11 @@
 		298D7C6D1BC2C88F00FD3B3E /* HTTPBin.org */ = {
 			isa = PBXGroup;
 			children = (
+				946173462490EB6400F9149A /* Amazon Root CA 1.cer */,
+				946173472490EB6400F9149A /* Amazon.cer */,
 				298D7CE21BC2CB7C00FD3B3E /* HTTPBinOrgServerTrustChain */,
-				298D7C6E1BC2C88F00FD3B3E /* AddTrust_External_CA_Root.cer */,
-				298D7C6F1BC2C88F00FD3B3E /* COMODO_RSA_Certification_Authority.cer */,
-				298D7C701BC2C88F00FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer */,
-				1FE783001C58579D00A73B7C /* httpbinorg_01192017.cer */,
+				9461734C2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer */,
+				946173432490E2F500F9149A /* httpbinorg_02182021.cer */,
 			);
 			path = HTTPBin.org;
 			sourceTree = "<group>";
@@ -865,21 +861,17 @@
 			files = (
 				2987B0DE1BC40AFB00179A4C /* foobar.com.cer in Resources */,
 				2987B0D61BC40AEC00179A4C /* ADNNetServerTrustChain in Resources */,
-				2987B0D91BC40AF300179A4C /* COMODO_RSA_Certification_Authority.cer in Resources */,
 				2987B0DF1BC40AFB00179A4C /* NoDomains.cer in Resources */,
 				2987B0D41BC40AE900179A4C /* adn_1.cer in Resources */,
 				2987B0DD1BC40AFB00179A4C /* AltName.cer in Resources */,
 				2987B0D71BC40AF000179A4C /* HTTPBinOrgServerTrustChain in Resources */,
 				2987B0D31BC40AE900179A4C /* adn_0.cer in Resources */,
 				2987B0DC1BC40AF600179A4C /* logo.png in Resources */,
-				2987B0D81BC40AF300179A4C /* AddTrust_External_CA_Root.cer in Resources */,
 				2987B0D51BC40AE900179A4C /* adn_2.cer in Resources */,
-				2987B0DA1BC40AF300179A4C /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer in Resources */,
 				5F4323D71BF63CB0003B8749 /* GoogleComServerTrustChainPath1 in Resources */,
 				5F4323DB1BF63CBA003B8749 /* GoogleComServerTrustChainPath2 in Resources */,
 				5F4323BD1BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer in Resources */,
 				5F4323DF1BF63CCC003B8749 /* GeoTrust_Global_CA_Root.cer in Resources */,
-				1FE783031C5857A200A73B7C /* httpbinorg_01192017.cer in Resources */,
 				5F4323C01BF63741003B8749 /* GeoTrust_Global_CA-cross.cer in Resources */,
 				5F4323CF1BF63741003B8749 /* GoogleInternetAuthorityG2.cer in Resources */,
 				5F4323C31BF63741003B8749 /* google.com.cer in Resources */,
@@ -890,12 +882,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				298D7CC51BC2CAA200FD3B3E /* AddTrust_External_CA_Root.cer in Resources */,
+				9461734E2490EC7A00F9149A /* Starfield Services Root Certificate Authority - G2.cer in Resources */,
+				9461734A2490EB7800F9149A /* Amazon Root CA 1.cer in Resources */,
+				9461734B2490EB7800F9149A /* Amazon.cer in Resources */,
 				298D7CBF1BC2CA9D00FD3B3E /* foobar.com.cer in Resources */,
 				298D7CBA1BC2CA9800FD3B3E /* logo.png in Resources */,
-				298D7CC61BC2CAA200FD3B3E /* COMODO_RSA_Certification_Authority.cer in Resources */,
 				297824A31BC2D69A0041C395 /* adn_0.cer in Resources */,
-				298D7CC71BC2CAA200FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer in Resources */,
 				298D7CE31BC2CB7C00FD3B3E /* HTTPBinOrgServerTrustChain in Resources */,
 				297824A71BC2D69A0041C395 /* adn_2.cer in Resources */,
 				297824A51BC2D69A0041C395 /* adn_1.cer in Resources */,
@@ -906,7 +898,7 @@
 				5F4323D91BF63CBA003B8749 /* GoogleComServerTrustChainPath2 in Resources */,
 				5F4323BB1BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer in Resources */,
 				5F4323DD1BF63CCC003B8749 /* GeoTrust_Global_CA_Root.cer in Resources */,
-				1FE783011C5857A100A73B7C /* httpbinorg_01192017.cer in Resources */,
+				946173452490E3B100F9149A /* httpbinorg_02182021.cer in Resources */,
 				5F4323BE1BF63741003B8749 /* GeoTrust_Global_CA-cross.cer in Resources */,
 				5F4323CD1BF63741003B8749 /* GoogleInternetAuthorityG2.cer in Resources */,
 				5F4323C11BF63741003B8749 /* google.com.cer in Resources */,
@@ -917,12 +909,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				298D7CC11BC2CAA100FD3B3E /* AddTrust_External_CA_Root.cer in Resources */,
 				298D7CBC1BC2CA9C00FD3B3E /* foobar.com.cer in Resources */,
 				298D7CB91BC2CA9800FD3B3E /* logo.png in Resources */,
-				298D7CC21BC2CAA100FD3B3E /* COMODO_RSA_Certification_Authority.cer in Resources */,
 				297824A41BC2D69A0041C395 /* adn_0.cer in Resources */,
-				298D7CC31BC2CAA100FD3B3E /* COMODO_RSA_Domain_Validation_Secure_Server_CA.cer in Resources */,
 				298D7CE41BC2CB7C00FD3B3E /* HTTPBinOrgServerTrustChain in Resources */,
 				297824A81BC2D69A0041C395 /* adn_2.cer in Resources */,
 				297824A61BC2D69A0041C395 /* adn_1.cer in Resources */,
@@ -933,7 +922,6 @@
 				5F4323DA1BF63CBA003B8749 /* GoogleComServerTrustChainPath2 in Resources */,
 				5F4323BC1BF63741003B8749 /* Equifax_Secure_Certificate_Authority_Root.cer in Resources */,
 				5F4323CE1BF63741003B8749 /* GoogleInternetAuthorityG2.cer in Resources */,
-				1FE783021C5857A100A73B7C /* httpbinorg_01192017.cer in Resources */,
 				5F4323DE1BF63CCC003B8749 /* GeoTrust_Global_CA_Root.cer in Resources */,
 				5F4323BF1BF63741003B8749 /* GeoTrust_Global_CA-cross.cer in Resources */,
 				5F4323C21BF63741003B8749 /* google.com.cer in Resources */,
@@ -944,6 +932,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946173492490EB6500F9149A /* Amazon.cer in Resources */,
+				946173442490E2F500F9149A /* httpbinorg_02182021.cer in Resources */,
+				9461734D2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer in Resources */,
+				946173482490EB6500F9149A /* Amazon Root CA 1.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
