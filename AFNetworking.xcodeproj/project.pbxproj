@@ -186,10 +186,10 @@
 		88D1B5FF1E59D851002A6EE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B5FE1E59D851002A6EE4 /* CoreGraphics.framework */; };
 		88D1B6011E59D85A002A6EE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6001E59D85A002A6EE4 /* Security.framework */; };
 		88D1B6031E59D865002A6EE4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6021E59D865002A6EE4 /* SystemConfiguration.framework */; };
-		88D1B6051E59D86F002A6EE4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6041E59D86F002A6EE4 /* MobileCoreServices.framework */; };
 		88D1B6061E59D8C9002A6EE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B5FC1E59D847002A6EE4 /* UIKit.framework */; };
 		88D1B6071E59D8D4002A6EE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6001E59D85A002A6EE4 /* Security.framework */; };
 		88D1B6091E59D8EF002A6EE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6081E59D8EF002A6EE4 /* QuartzCore.framework */; };
+		946172FC2490DAB900F9149A /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946172FB2490DAB900F9149A /* CoreServices.framework */; };
 		946173442490E2F500F9149A /* httpbinorg_02182021.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173432490E2F500F9149A /* httpbinorg_02182021.cer */; };
 		946173452490E3B100F9149A /* httpbinorg_02182021.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173432490E2F500F9149A /* httpbinorg_02182021.cer */; };
 		946173482490EB6500F9149A /* Amazon Root CA 1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173462490EB6400F9149A /* Amazon Root CA 1.cer */; };
@@ -306,8 +306,8 @@
 		88D1B5FE1E59D851002A6EE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		88D1B6001E59D85A002A6EE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		88D1B6021E59D865002A6EE4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		88D1B6041E59D86F002A6EE4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		88D1B6081E59D8EF002A6EE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		946172FB2490DAB900F9149A /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		946173432490E2F500F9149A /* httpbinorg_02182021.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = httpbinorg_02182021.cer; sourceTree = "<group>"; };
 		946173462490EB6400F9149A /* Amazon Root CA 1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amazon Root CA 1.cer"; sourceTree = "<group>"; };
 		946173472490EB6400F9149A /* Amazon.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = Amazon.cer; sourceTree = "<group>"; };
@@ -354,7 +354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88D1B6051E59D86F002A6EE4 /* MobileCoreServices.framework in Frameworks */,
+				946172FC2490DAB900F9149A /* CoreServices.framework in Frameworks */,
 				88D1B6031E59D865002A6EE4 /* SystemConfiguration.framework in Frameworks */,
 				88D1B6011E59D85A002A6EE4 /* Security.framework in Frameworks */,
 				88D1B5FF1E59D851002A6EE4 /* CoreGraphics.framework in Frameworks */,
@@ -576,8 +576,8 @@
 		88D1B5FB1E59D847002A6EE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				946172FB2490DAB900F9149A /* CoreServices.framework */,
 				88D1B6081E59D8EF002A6EE4 /* QuartzCore.framework */,
-				88D1B6041E59D86F002A6EE4 /* MobileCoreServices.framework */,
 				88D1B6021E59D865002A6EE4 /* SystemConfiguration.framework */,
 				88D1B6001E59D85A002A6EE4 /* Security.framework */,
 				88D1B5FE1E59D851002A6EE4 /* CoreGraphics.framework */,
