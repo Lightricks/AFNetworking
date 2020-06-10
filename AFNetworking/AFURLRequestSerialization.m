@@ -21,11 +21,7 @@
 
 #import "AFURLRequestSerialization.h"
 
-#if TARGET_OS_IOS || TARGET_OS_WATCH || TARGET_OS_TV
-#import <MobileCoreServices/MobileCoreServices.h>
-#else
 #import <CoreServices/CoreServices.h>
-#endif
 
 NSString * const AFURLRequestSerializationErrorDomain = @"com.alamofire.error.serialization.request";
 NSString * const AFNetworkingOperationFailingURLRequestErrorKey = @"com.alamofire.serialization.request.error.response";
