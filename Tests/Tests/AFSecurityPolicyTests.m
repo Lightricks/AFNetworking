@@ -636,12 +636,16 @@ static SecTrustRef AFUTTrustWithCertificate(SecCertificateRef certificate) {
     policy.validatesDomainName = NO;
     policy.pinnedCertificates = [NSSet setWithObject:(__bridge_transfer id)SecCertificateCopyData(AFUTHTTPBinOrgCertificate())];
 
-    NSMutableData *archiveData = [NSMutableData new];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:archiveData];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initRequiringSecureCoding:NO];
     [archiver encodeObject:policy forKey:@"policy"];
     [archiver finishEncoding];
+    NSData *archiveData = [archiver encodedData];
 
-    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:archiveData];
+    NSError *error;
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:archiveData error:&error];
+    XCTAssertNotNil(unarchiver);
+
+    unarchiver.requiresSecureCoding = NO;
     AFSecurityPolicy *unarchivedPolicy = [unarchiver decodeObjectOfClass:[AFSecurityPolicy class] forKey:@"policy"];
 
     XCTAssertNotEqual(unarchivedPolicy, policy);

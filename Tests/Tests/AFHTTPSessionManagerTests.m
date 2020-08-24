@@ -203,13 +203,20 @@
 }
 
 - (void)testCanBeEncoded {
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.manager];
+    NSError *error;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.manager requiringSecureCoding:NO error:&error];
     XCTAssertNotNil(data);
 }
 
 - (void)testCanBeDecoded {
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.manager];
-    AFHTTPSessionManager *newManager = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSError *error;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.manager requiringSecureCoding:NO error:&error];
+    XCTAssertNotNil(data);
+
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:data error:&error];
+    XCTAssertNil(error);
+    unarchiver.requiresSecureCoding = NO;
+    AFHTTPSessionManager *newManager = [unarchiver decodeObjectForKey:NSKeyedArchiveRootObjectKey];
     XCTAssertNotNil(newManager.securityPolicy);
     XCTAssertNotNil(newManager.requestSerializer);
     XCTAssertNotNil(newManager.responseSerializer);
