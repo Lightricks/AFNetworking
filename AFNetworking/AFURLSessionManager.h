@@ -22,11 +22,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFURLResponseSerialization.h"
-#import "AFURLRequestSerialization.h"
-#import "AFSecurityPolicy.h"
+#import <AFNetworking/AFURLResponseSerialization.h>
+#import <AFNetworking/AFURLRequestSerialization.h>
+#import <AFNetworking/AFSecurityPolicy.h>
 #if !TARGET_OS_WATCH
-#import "AFNetworkReachabilityManager.h"
+#import <AFNetworking/AFNetworkReachabilityManager.h>
 #endif
 
 /**

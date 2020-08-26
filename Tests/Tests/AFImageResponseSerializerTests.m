@@ -57,10 +57,15 @@
 - (void)testImageSerializerCanBeArchivedAndUnarchived {
     AFImageResponseSerializer   *responseSerializer = [AFImageResponseSerializer serializer];
     NSData  *archive    = nil;
-    
-    archive = [NSKeyedArchiver archivedDataWithRootObject:responseSerializer];
+
+    NSError *error;
+    archive = [NSKeyedArchiver archivedDataWithRootObject:responseSerializer requiringSecureCoding:NO error:&error];
     XCTAssertNotNil(archive);
-    AFImageResponseSerializer *unarchivedSerializer = [NSKeyedUnarchiver unarchiveObjectWithData:archive];
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:archive error:&error];
+    XCTAssertNil(error);
+
+    unarchiver.requiresSecureCoding = NO;
+    AFImageResponseSerializer *unarchivedSerializer = [unarchiver decodeObjectForKey:NSKeyedArchiveRootObjectKey];
     XCTAssertNotNil(unarchivedSerializer);
     XCTAssertNotEqual(unarchivedSerializer, responseSerializer);
     XCTAssertTrue([unarchivedSerializer.acceptableContentTypes isEqualToSet:responseSerializer.acceptableContentTypes]);
@@ -82,10 +87,15 @@
     responseSerializer.automaticallyInflatesResponseImage = !responseSerializer.automaticallyInflatesResponseImage;
     responseSerializer.imageScale = responseSerializer.imageScale * 2.0f;
 #endif
-    
-    archive = [NSKeyedArchiver archivedDataWithRootObject:responseSerializer];
+
+    NSError *error;
+    archive = [NSKeyedArchiver archivedDataWithRootObject:responseSerializer requiringSecureCoding:NO error:&error];
     XCTAssertNotNil(archive);
-    AFImageResponseSerializer *unarchivedSerializer = [NSKeyedUnarchiver unarchiveObjectWithData:archive];
+
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:archive error:&error];
+    XCTAssertNil(error);
+    unarchiver.requiresSecureCoding = NO;
+    AFImageResponseSerializer *unarchivedSerializer = [unarchiver decodeObjectForKey:NSKeyedArchiveRootObjectKey];
     XCTAssertNotNil(unarchivedSerializer);
     XCTAssertNotEqual(unarchivedSerializer, responseSerializer);
 

@@ -81,9 +81,14 @@
     AFImageResponseSerializer *imageSerializer = [AFImageResponseSerializer serializer];
     AFJSONResponseSerializer *jsonSerializer = [AFJSONResponseSerializer serializer];
     AFCompoundResponseSerializer *compoundSerializer = [AFCompoundResponseSerializer compoundSerializerWithResponseSerializers:@[imageSerializer, jsonSerializer]];
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:compoundSerializer];
+    NSError *error;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:compoundSerializer requiringSecureCoding:NO error:&error];
     XCTAssertNotNil(data);
-    AFCompoundResponseSerializer *unarchivedSerializer = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:data error:&error];
+    XCTAssertNil(error);    
+    unarchiver.requiresSecureCoding = NO;
+    AFCompoundResponseSerializer *unarchivedSerializer = [unarchiver decodeObjectForKey:NSKeyedArchiveRootObjectKey];
     XCTAssertNotNil(unarchivedSerializer);
     XCTAssertNotEqual(unarchivedSerializer, compoundSerializer);
     XCTAssertTrue(compoundSerializer.responseSerializers.count == compoundSerializer.responseSerializers.count);
