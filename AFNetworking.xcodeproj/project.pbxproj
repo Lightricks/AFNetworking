@@ -190,13 +190,9 @@
 		88D1B6071E59D8D4002A6EE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6001E59D85A002A6EE4 /* Security.framework */; };
 		88D1B6091E59D8EF002A6EE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D1B6081E59D8EF002A6EE4 /* QuartzCore.framework */; };
 		946172FC2490DAB900F9149A /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946172FB2490DAB900F9149A /* CoreServices.framework */; };
-		946173442490E2F500F9149A /* httpbinorg_02182021.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173432490E2F500F9149A /* httpbinorg_02182021.cer */; };
 		946173452490E3B100F9149A /* httpbinorg_02182021.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173432490E2F500F9149A /* httpbinorg_02182021.cer */; };
-		946173482490EB6500F9149A /* Amazon Root CA 1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173462490EB6400F9149A /* Amazon Root CA 1.cer */; };
-		946173492490EB6500F9149A /* Amazon.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173472490EB6400F9149A /* Amazon.cer */; };
 		9461734A2490EB7800F9149A /* Amazon Root CA 1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173462490EB6400F9149A /* Amazon Root CA 1.cer */; };
 		9461734B2490EB7800F9149A /* Amazon.cer in Resources */ = {isa = PBXBuildFile; fileRef = 946173472490EB6400F9149A /* Amazon.cer */; };
-		9461734D2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9461734C2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer */; };
 		9461734E2490EC7A00F9149A /* Starfield Services Root Certificate Authority - G2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9461734C2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer */; };
 		E91164651DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E91164641DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m */; };
 		E91164661DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E91164641DA6A7AE00DFFF56 /* AFPropertyListRequestSerializerTests.m */; };
@@ -932,10 +928,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				946173492490EB6500F9149A /* Amazon.cer in Resources */,
-				946173442490E2F500F9149A /* httpbinorg_02182021.cer in Resources */,
-				9461734D2490EC7000F9149A /* Starfield Services Root Certificate Authority - G2.cer in Resources */,
-				946173482490EB6500F9149A /* Amazon Root CA 1.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
