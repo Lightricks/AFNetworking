@@ -51,30 +51,12 @@ static BOOL AFSecKeyIsEqualToKey(SecKeyRef key1, SecKeyRef key2) {
 static id AFPublicKeyForCertificate(NSData *certificate) {
     id allowedPublicKey = nil;
     SecCertificateRef allowedCertificate;
-    SecPolicyRef policy = nil;
-    SecTrustRef allowedTrust = nil;
-    SecTrustResultType result;
 
     allowedCertificate = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificate);
     __Require_Quiet(allowedCertificate != NULL, _out);
 
-    policy = SecPolicyCreateBasicX509();
-    __Require_noErr_Quiet(SecTrustCreateWithCertificates(allowedCertificate, policy, &allowedTrust), _out);
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    __Require_noErr_Quiet(SecTrustEvaluate(allowedTrust, &result), _out);
-#pragma clang diagnostic pop
-    allowedPublicKey = (__bridge_transfer id)SecTrustCopyPublicKey(allowedTrust);
-
+    allowedPublicKey = (__bridge_transfer id)SecCertificateCopyKey(allowedCertificate);
 _out:
-    if (allowedTrust) {
-        CFRelease(allowedTrust);
-    }
-
-    if (policy) {
-        CFRelease(policy);
-    }
-
     if (allowedCertificate) {
         CFRelease(allowedCertificate);
     }
