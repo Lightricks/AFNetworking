@@ -42,7 +42,14 @@ _out:
 
 static BOOL AFSecKeyIsEqualToKey(SecKeyRef key1, SecKeyRef key2) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH || TARGET_OS_TV
+    if (@available(iOS 14.0, *)) {
+        if ([NSProcessInfo processInfo].isiOSAppOnMac) {
+            return [(__bridge_transfer NSData *)SecKeyCopyExternalRepresentation(key1, nil) isEqual:
+                    (__bridge_transfer NSData *)SecKeyCopyExternalRepresentation(key2, nil)];
+        }
+    }
     return [(__bridge id)key1 isEqual:(__bridge id)key2];
+
 #else
     return [AFSecKeyGetData(key1) isEqual:AFSecKeyGetData(key2)];
 #endif
