@@ -24,7 +24,7 @@
 #import "AFURLRequestSerialization.h"
 #import "AFURLResponseSerialization.h"
 
-static NSData * AFJSONTestData() {
+static NSData * AFJSONTestData(void) {
     return [NSJSONSerialization dataWithJSONObject:@{@"foo": @"bar"} options:(NSJSONWritingOptions)0 error:nil];
 }
 
