@@ -43,14 +43,14 @@ static SecTrustRef AFUTTrustChainForCertsInDirectory(NSString *directoryPath) {
     return trust;
 }
 
-static SecTrustRef AFUTHTTPBinOrgServerTrust() {
+static SecTrustRef AFUTHTTPBinOrgServerTrust(void) {
     NSString *bundlePath = [[NSBundle bundleForClass:[AFSecurityPolicyTests class]] resourcePath];
     NSString *serverCertDirectoryPath = [bundlePath stringByAppendingPathComponent:@"HTTPBinOrgServerTrustChain"];
 
     return AFUTTrustChainForCertsInDirectory(serverCertDirectoryPath);
 }
 
-static SecTrustRef AFUTADNNetServerTrust() {
+static SecTrustRef AFUTADNNetServerTrust(void) {
     NSString *bundlePath = [[NSBundle bundleForClass:[AFSecurityPolicyTests class]] resourcePath];
     NSString *serverCertDirectoryPath = [bundlePath stringByAppendingPathComponent:@"ADNNetServerTrustChain"];
 
@@ -71,7 +71,7 @@ static SecTrustRef AFUTADNNetServerTrust() {
 //    return AFUTTrustChainForCertsInDirectory(serverCertDirectoryPath);
 //}
 
-static SecCertificateRef AFUTHTTPBinOrgCertificate() {
+static SecCertificateRef AFUTHTTPBinOrgCertificate(void) {
     NSString *certPath = [[NSBundle bundleForClass:[AFSecurityPolicyTests class]] pathForResource:@"httpbinorg_02182021" ofType:@"cer"];
     NSCAssert(certPath != nil, @"Path for certificate should not be nil");
     NSData *certData = [NSData dataWithContentsOfFile:certPath];
@@ -79,7 +79,7 @@ static SecCertificateRef AFUTHTTPBinOrgCertificate() {
     return SecCertificateCreateWithData(NULL, (__bridge CFDataRef)(certData));
 }
 
-static SecCertificateRef AFUTAmazonAuthorityCertificate() {
+static SecCertificateRef AFUTAmazonAuthorityCertificate(void) {
     NSString *certPath = [[NSBundle bundleForClass:NSClassFromString(@"AFSecurityPolicyTests")] pathForResource:@"Amazon" ofType:@"cer"];
     NSCAssert(certPath != nil, @"Path for certificate should not be nil");
     NSData *certData = [NSData dataWithContentsOfFile:certPath];
@@ -87,7 +87,7 @@ static SecCertificateRef AFUTAmazonAuthorityCertificate() {
     return SecCertificateCreateWithData(NULL, (__bridge CFDataRef)(certData));
 }
 
-static SecCertificateRef AFUTAmazonRootAuthorityCertificate() {
+static SecCertificateRef AFUTAmazonRootAuthorityCertificate(void) {
     NSString *certPath = [[NSBundle bundleForClass:NSClassFromString(@"AFSecurityPolicyTests")] pathForResource:@"Amazon Root CA 1" ofType:@"cer"];
     NSCAssert(certPath != nil, @"Path for certificate should not be nil");
     NSData *certData = [NSData dataWithContentsOfFile:certPath];
@@ -95,7 +95,7 @@ static SecCertificateRef AFUTAmazonRootAuthorityCertificate() {
     return SecCertificateCreateWithData(NULL, (__bridge CFDataRef)(certData));
 }
 
-static SecCertificateRef AFUTStarfieldServicesRootCertificate() {
+static SecCertificateRef AFUTStarfieldServicesRootCertificate(void) {
     NSString *certPath = [[NSBundle bundleForClass:NSClassFromString(@"AFSecurityPolicyTests")] pathForResource:@"Starfield Services Root Certificate Authority - G2" ofType:@"cer"];
     NSCAssert(certPath != nil, @"Path for certificate should not be nil");
     NSData *certData = [NSData dataWithContentsOfFile:certPath];
@@ -119,7 +119,7 @@ static SecCertificateRef AFUTStarfieldServicesRootCertificate() {
 //    return SecCertificateCreateWithData(NULL, (__bridge CFDataRef)(certData));
 //}
 
-static SecCertificateRef AFUTSelfSignedCertificateWithoutDomain() {
+static SecCertificateRef AFUTSelfSignedCertificateWithoutDomain(void) {
     NSString *certPath = [[NSBundle bundleForClass:[AFSecurityPolicyTests class]] pathForResource:@"NoDomains" ofType:@"cer"];
     NSCAssert(certPath != nil, @"Path for certificate should not be nil");
     NSData *certData = [NSData dataWithContentsOfFile:certPath];
@@ -127,7 +127,7 @@ static SecCertificateRef AFUTSelfSignedCertificateWithoutDomain() {
     return SecCertificateCreateWithData(NULL, (__bridge CFDataRef)(certData));
 }
 
-static SecCertificateRef AFUTSelfSignedCertificateWithCommonNameDomain() {
+static SecCertificateRef AFUTSelfSignedCertificateWithCommonNameDomain(void) {
     NSString *certPath = [[NSBundle bundleForClass:[AFSecurityPolicyTests class]] pathForResource:@"foobar.com" ofType:@"cer"];
     NSCAssert(certPath != nil, @"Path for certificate should not be nil");
     NSData *certData = [NSData dataWithContentsOfFile:certPath];
@@ -135,7 +135,7 @@ static SecCertificateRef AFUTSelfSignedCertificateWithCommonNameDomain() {
     return SecCertificateCreateWithData(NULL, (__bridge CFDataRef)(certData));
 }
 
-static SecCertificateRef AFUTSelfSignedCertificateWithDNSNameDomain() {
+static SecCertificateRef AFUTSelfSignedCertificateWithDNSNameDomain(void) {
     NSString *certPath = [[NSBundle bundleForClass:[AFSecurityPolicyTests class]] pathForResource:@"AltName" ofType:@"cer"];
     NSCAssert(certPath != nil, @"Path for certificate should not be nil");
     NSData *certData = [NSData dataWithContentsOfFile:certPath];
