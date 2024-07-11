@@ -88,10 +88,15 @@ _out:
 static NSArray * AFCertificateTrustChainForServerTrust(SecTrustRef serverTrust) {
     CFIndex certificateCount = SecTrustGetCertificateCount(serverTrust);
     NSMutableArray *trustChain = [NSMutableArray arrayWithCapacity:(NSUInteger)certificateCount];
+    CFArrayRef certificates = SecTrustCopyCertificateChain(serverTrust);
 
     for (CFIndex i = 0; i < certificateCount; i++) {
-        SecCertificateRef certificate = SecTrustGetCertificateAtIndex(serverTrust, i);
+        SecCertificateRef certificate = (SecCertificateRef)CFArrayGetValueAtIndex(certificates, i);
         [trustChain addObject:(__bridge_transfer NSData *)SecCertificateCopyData(certificate)];
+    }
+
+    if (certificates) {
+        CFRelease(certificates);
     }
 
     return [NSArray arrayWithArray:trustChain];
@@ -101,8 +106,10 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
     SecPolicyRef policy = SecPolicyCreateBasicX509();
     CFIndex certificateCount = SecTrustGetCertificateCount(serverTrust);
     NSMutableArray *trustChain = [NSMutableArray arrayWithCapacity:(NSUInteger)certificateCount];
+    CFArrayRef serverTrustCertificates = SecTrustCopyCertificateChain(serverTrust);
     for (CFIndex i = 0; i < certificateCount; i++) {
-        SecCertificateRef certificate = SecTrustGetCertificateAtIndex(serverTrust, i);
+        SecCertificateRef certificate =
+            (SecCertificateRef)CFArrayGetValueAtIndex(serverTrustCertificates, i);
 
         SecCertificateRef someCertificates[] = {certificate};
         CFArrayRef certificates = CFArrayCreate(NULL, (const void **)someCertificates, 1, NULL);
@@ -115,7 +122,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         __Require_noErr_Quiet(SecTrustEvaluate(trust, &result), _out);
 #pragma clang diagnostic pop
-        [trustChain addObject:(__bridge_transfer id)SecTrustCopyPublicKey(trust)];
+        [trustChain addObject:(__bridge_transfer id)SecTrustCopyKey(trust)];
 
     _out:
         if (trust) {
@@ -128,6 +135,11 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
 
         continue;
     }
+
+    if (serverTrustCertificates) {
+        CFRelease(serverTrustCertificates);
+    }
+
     CFRelease(policy);
 
     return [NSArray arrayWithArray:trustChain];
