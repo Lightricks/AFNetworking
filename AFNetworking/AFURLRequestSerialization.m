@@ -22,6 +22,7 @@
 #import "AFURLRequestSerialization.h"
 
 #import <CoreServices/CoreServices.h>
+#import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 
 NSString * const AFURLRequestSerializationErrorDomain = @"com.alamofire.error.serialization.request";
 NSString * const AFNetworkingOperationFailingURLRequestErrorKey = @"com.alamofire.serialization.request.error.response";
@@ -605,8 +606,9 @@ static inline NSString * AFMultipartFormFinalBoundary(NSString *boundary) {
 }
 
 static inline NSString * AFContentTypeForPathExtension(NSString *extension) {
-    NSString *UTI = (__bridge_transfer NSString *)UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)extension, NULL);
-    NSString *contentType = (__bridge_transfer NSString *)UTTypeCopyPreferredTagWithClass((__bridge CFStringRef)UTI, kUTTagClassMIMEType);
+    UTType *type = [UTType typeWithFilenameExtension:extension];
+    NSString *contentType = type.preferredMIMEType;
+
     if (!contentType) {
         return @"application/octet-stream";
     } else {
